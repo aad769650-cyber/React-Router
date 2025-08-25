@@ -1,7 +1,10 @@
+import { NavLink } from "react-router";
 import "../AppLayout/LAyout/UI/styles.css"
 export const MovieCard=(props)=>{
     console.log(props);
-    const {Title,Year,Poster}=props.value
+    const {Title,Year,Poster,imdbID}=props.value
+    console.log(imdbID);
+    
     return(
         <>
       <li className="card-container">
@@ -16,7 +19,10 @@ export const MovieCard=(props)=>{
 <div className="Year">Year:{Year}</div>
 
 </div>
+<NavLink to={`/movie/ ${imdbID}`}>
+
 <button className="btn">Watch Now</button>
+</NavLink>
       </li>
         </>
     )

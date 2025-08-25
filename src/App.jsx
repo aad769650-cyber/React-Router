@@ -7,6 +7,8 @@ import { Movie } from "./Pages/Movie"
 import { AppLayout } from "./AppLayout/LAyout/UI/Layout/AppLayout"
 import { ErrorPage } from "./AppLayout/LAyout/UI/ErrorPage"
 import { getMoviesData } from "./api/GetApiData"
+import { MovieDetail } from "./Pages/MovieDetail"
+import { getMoviesDetail } from "./getMovieDetail"
 
 const App=()=>{
 
@@ -81,13 +83,19 @@ children:[
     element:<Contact></Contact>,
   },
   {
+    path:"/",
+    element:<Home></Home>,
+  },
+  {
     path:"/movie",
     element:<Movie></Movie>,
     loader:getMoviesData,
   },
   {
-    path:"/",
-    element:<Home></Home>,
+path:"/movie/:Id",
+element:<MovieDetail/>,
+loader:getMoviesDetail,
+
   },
 
 ]
