@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+
+    background: #F4A261;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+height: 2rem;
+/* padding: .2rem; */
+
+}
+.parent ul{
+    display: flex;
+    gap: 1rem;
+
+}
+.parent ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+position: relative;
+
+ 
+}
+
+   .parent ul li .nav-item{
+        text-decoration: none;
+        color: #2C3E50;
+    }
+li a::after{
+    content: "";
+    position: absolute;
+left: 0;
+bottom: 0;
+height: 2px;
+width: 0;
+background-color: aliceblue;
+transition: all .5s ease-in-out;
+}
+
+
+
+li a:hover::after{
+    width: 100%;
+}
+
+
+.parent ul li a:hover{
+color: #0d1b61;
+}
+
+
+.Home{
+    height: 90vh;
+    background-color: #88B04B;
+}
+
+.Footer{
+    height: 10rem;
+    background: #000;
+color: #6B9080;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+
+
+& li{
+    list-style: none;
+    margin-bottom: .3rem;
+    cursor: pointer;
+}
+& p{
+       margin-bottom: .3rem;
+ }
+/* flex-direction: column; */
+input{
+    height: 1.5rem;
+}
+}
+
+
+
+Footer li:hover{
+    color: #FFC1CC;
+}
+
+
+/* a:active{
+    color: #000;
+} */
+
+.section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #BBDCE5;
+    color: #2C3E50;
+    height: 2rem;
+    cursor: pointer;
+    
+
+}
+.SignIn{
+    margin-right: 1rem;
+    /* color: red; */
+}
+
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+.parent ul li .active{
+  color: #38bfe4;
+}
+
+
+.parent ul li .activeLink{
+
+    color: rgb(9, 169, 47);
+}
+
+.homePage{
+    text-decoration: none;
+    background: #38bfe4;
+    padding: 0.3rem .5rem;
+    border-radius: .2rem;
+    cursor: pointer;
+   
+}
+.para-div{
+ margin: .5rem;
+}
+.figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+figure img{
+    width: auto;
+    height: 100%;
+}
+
+
+.card-container{
+ 
+    /* display: flex; */
+    height: 30rem;
+    list-style: none;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease;
+padding: 1rem;
+cursor: pointer;
+position: relative;
+
+    & img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.card-container:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.2rem;
+    background: #757F9A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+
+.Movie-Ul{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr)) ;
+gap: 1rem;
+padding: 3rem;
+
+margin: 1rem;
+
+
+}
+
+.btn{
+    
+    width: 90%;
+    position: absolute;
+    bottom: .5rem;
+    padding: 0.2rem;
+    background-color: #6B9080;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.btn:hover{
+    background-color: #9dacb1;
+    color: #333232;
+    scale: 1.1;
+}
+.loading{
+    position: relative;
+}
+
+
+.loading-container{
+
+     position: absolute;
+    top: 5rem;
+    left: 50%;
+    /*width: 2rem;
+    height: 2rem;
+  border-top: 4px solid #3498db; /* Blue top border */
+  /* border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto; */ 
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 80px;
+
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 80px;
+}
+
+.loading-container span {
+  width: 12px;
+  height: 12px;
+  background-color: #3498db; /* blue */
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loading-container span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-container span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+}
