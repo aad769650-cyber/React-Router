@@ -13,15 +13,15 @@ export const Contact=()=>{
         <>
        <div className="contact-container">
 
+
+
+
+<Form method="POST" action="/contact">
 <h3 className="contact-para">
 
 Contact us: For Better Experience
 
 </h3>
-
-
-
-<Form method="POST" action="/contact">
     <label htmlFor="text">Name:
         <input 
         type="text"
@@ -54,7 +54,7 @@ TextArea:
     <button type="submit" className="contact-btn">Send Message</button>
 </Form>
 
-
+<div className="contact-image"><img src="/contact.png" alt="contact image" /></div>
 
 
        </div>
