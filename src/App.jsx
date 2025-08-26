@@ -9,6 +9,7 @@ import { ErrorPage } from "./AppLayout/LAyout/UI/ErrorPage"
 import { getMoviesData } from "./api/GetApiData"
 import { MovieDetail } from "./Pages/MovieDetail"
 import { getMoviesDetail } from "./getMovieDetail"
+import { getContactData } from "./Pages/getContactData"
 
 const App=()=>{
 
@@ -81,6 +82,7 @@ children:[
   {
     path:"/contact",
     element:<Contact></Contact>,
+    action:getContactData,
   },
   {
     path:"/",
